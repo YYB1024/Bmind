@@ -1,29 +1,36 @@
 package com.yupi.Bmind.model.dto.chart;
 
 
+import com.yupi.Bmind.common.PageRequest;
 import lombok.Data;
 
 import java.io.Serializable;
 
 /**
- * 图表添加请求
+ * 图表查询请求
  *
  * @author yangyanbin
  * @date 2023/10/26
  * @since 20231026
  */
 @Data
-public class ChartAddRequest implements Serializable {
-    private static final long serialVersionUID = 6742482939774416657L;
+public class ChartQueryRequest extends PageRequest implements Serializable {
+
+    private static final long serialVersionUID = -7041822220277959032L;
+
+    /**
+     * id
+     */
+    private Long id;
     /**
      * 分析目标
      */
     private String goal;
 
     /**
-     * 图表数据
+     * 创建用户id
      */
-    private String chartData;
+    private Long userId;
 
     /**
      * 图表类型

@@ -6,15 +6,17 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 图表添加请求
- *
+ * 图表编辑请求
  * @author yangyanbin
  * @date 2023/10/26
  * @since 20231026
  */
 @Data
-public class ChartAddRequest implements Serializable {
-    private static final long serialVersionUID = 6742482939774416657L;
+public class ChartEditRequest implements Serializable {
+
+
+    private static final long serialVersionUID = -3166810511625539578L;
+    private Long id;
     /**
      * 分析目标
      */
